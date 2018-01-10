@@ -1,7 +1,5 @@
 # Building and programming a robot arm
 
-https://github.com/jgell/lab-journal.md/blob/master/ros%20lab%20screenshot%201.jpeg
-
 
 https://github.com/jgell/lab-journal.md/blob/master/Robot%20Arm.md
 https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26804502_504131390001823_7271900630111591692_n.jpg?oh=13dc9450fc4c1cbbb3127f88c9543c85&oe=5AF5A525
