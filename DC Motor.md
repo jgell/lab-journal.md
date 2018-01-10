@@ -280,6 +280,208 @@ CODE
 
 
 
-this code is still not working totally and when solved will change from RPM to angular velocity. The reason being is that millis() can overflow quite quickly and if multiplied by six I could be making the issue worse before fixing other problems with the code.
+this code is still not working totally and when solved will change from RPM to angular velocity. The reason being is that millis() can overflow quite quickly and if multiplied by six I could be making the issue worse before fixing other problems with the code#include <IRremote.h>
+#include <IRremoteInt.h>
+#include <LiquidCrystal.h>
 
-Duty control is still to be finished.
+int RECV_PIN = 8; //pin assigned to ir reciever
+IRrecv irrecv(RECV_PIN);
+decode_results results; //store remotes value
+
+LiquidCrystal lcd(12, 11, 5, 4, 10, 7);  //defining lcd pins
+
+const int dataIN = 2; //IR sensor INPUT for speed dection
+int gate = 9; // pin assigned to open mesfet gate
+int rpm; // RPM value
+int duty;  // stores a value for PWM
+
+unsigned long prevmillis; // To store time
+unsigned long duration; // To store time difference
+unsigned long lcdrefresh; // To store time for lcd to refresh
+
+boolean currentstate; // Current state of IR input scan
+boolean prevstate; // State of IR sensor in previous scan
+
+void setup()
+{
+  irrecv.enableIRIn(); // Start the receiver
+  pinMode(gate,OUTPUT);
+  pinMode(dataIN,INPUT);
+  lcd.begin(16,2);     
+  prevmillis = 0;
+  prevstate = LOW;  
+  analogWrite(gate, 255);
+}
+
+void loop()
+{
+  angular_velocity();
+  speedcontrol();
+
+}
+
+int speedcontrol(){
+ 
+  if (irrecv.decode (& results))  
+  { 
+    
+    long IRRemote = 0;
+    long speed1 = 0xff30cf;
+    long speed2 = 0xff18e7;
+    long speed3 = 0xff7a85;
+    
+    IRRemote = (results.value); 
+
+    lcd.clear();
+    lcd.setCursor(0,0);
+
+    if(IRRemote  == speed1){
+      duty = duty - 10; 
+      analogWrite(gate, duty);      
+    }
+          
+    if(IRRemote == speed2){
+      duty = duty + 10;
+      analogWrite(gate, duty);
+    }
+
+    lcd.print("PWM = ");
+    lcd.print(duty);  
+  }
+
+irrecv.resume(); // Receive the next value
+analogWrite(gate, duty);
+return duty;
+}
+ 
+void angular_velocity(){
+ // degrees per second Measurement
+ currentstate = digitalRead(dataIN); // Read IR sensor state
+  
+ if( prevstate != currentstate) // If there is change in input
+   {
+     if( currentstate == HIGH ) // If input only changes from LOW to HIGH
+       {
+         duration = ( micros() - prevmillis ); // Time difference between revolution in microsecond
+         rpm = (11250000/duration); // 11250000 = (1/ time millis)*(1000*1000*60*6)/32 = degrees per second
+         prevmillis = micros(); // store time for next revolution calculation
+       }
+   }
+  prevstate = currentstate; // store this scan (prev scan) data for next scan
+  
+  // LCD Display
+  if( ( millis()-lcdrefresh ) >= 1000 )
+    {
+      lcd.clear();
+      lcd.setCursor(0,1);
+      lcd.print("RPM = ");
+      lcd.print(rpm);         
+      lcdrefresh = millis();   
+    }
+
+}
+.
+
+
+duty control by infrared remote to choose 3 speed setting on pulse width.
+
+#include <IRremote.h>
+#include <IRremoteInt.h>
+#include <LiquidCrystal.h>
+
+int RECV_PIN = 8; //pin assigned to ir reciever
+IRrecv irrecv(RECV_PIN);
+decode_results results; //store remotes value
+
+LiquidCrystal lcd(12, 11, 5, 4, 10, 7);  //defining lcd pins
+
+const int dataIN = 2; //IR sensor INPUT for speed dection
+int gate = 9; // pin assigned to open mesfet gate
+int rpm; // RPM value
+int duty;  // stores a value for PWM
+
+unsigned long prevmillis; // To store time
+unsigned long duration; // To store time difference
+unsigned long lcdrefresh; // To store time for lcd to refresh
+
+boolean currentstate; // Current state of IR input scan
+boolean prevstate; // State of IR sensor in previous scan
+
+void setup()
+{
+  irrecv.enableIRIn(); // Start the receiver
+  pinMode(gate,OUTPUT);
+  pinMode(dataIN,INPUT);
+  lcd.begin(16,2);     
+  prevmillis = 0;
+  prevstate = LOW;  
+  analogWrite(gate, 255);
+}
+
+void loop()
+{
+  angular_velocity();
+  speedcontrol();
+
+}
+
+int speedcontrol(){
+ 
+  if (irrecv.decode (& results))  
+  { 
+    
+    long IRRemote = 0;
+    long speed1 = 0xff30cf;
+    long speed2 = 0xff18e7;
+    long speed3 = 0xff7a85;
+    
+    IRRemote = (results.value); 
+
+    lcd.clear();
+    lcd.setCursor(0,0);
+
+    if(IRRemote  == speed1){
+      duty = duty - 10; 
+      analogWrite(gate, duty);      
+    }
+          
+    if(IRRemote == speed2){
+      duty = duty + 10;
+      analogWrite(gate, duty);
+    }
+
+    lcd.print("PWM = ");
+    lcd.print(duty);  
+  }
+
+irrecv.resume(); // Receive the next value
+analogWrite(gate, duty);
+return duty;
+}
+ 
+void angular_velocity(){
+ // degrees per second Measurement
+ currentstate = digitalRead(dataIN); // Read IR sensor state
+  
+ if( prevstate != currentstate) // If there is change in input
+   {
+     if( currentstate == HIGH ) // If input only changes from LOW to HIGH
+       {
+         duration = ( micros() - prevmillis ); // Time difference between revolution in microsecond
+         rpm = (11250000/duration); // 11250000 = (1/ time millis)*(1000*1000*60*6)/32 = degrees per second
+         prevmillis = micros(); // store time for next revolution calculation
+       }
+   }
+  prevstate = currentstate; // store this scan (prev scan) data for next scan
+  
+  // LCD Display
+  if( ( millis()-lcdrefresh ) >= 1000 )
+    {
+      lcd.clear();
+      lcd.setCursor(0,1);
+      lcd.print("RPM = ");
+      lcd.print(rpm);         
+      lcdrefresh = millis();   
+    }
+
+}
