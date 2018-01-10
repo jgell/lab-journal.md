@@ -97,3 +97,11 @@ Then I ran the executable hack4.py with:
 nano hack4py
 
 Running the python code: Refer to image 01-07
+
+https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26220135_504131956668433_1698501814619730595_n.jpg?oh=f8871a015b0ab1e564601327dadceec7&oe=5AE8BD47
+https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26231353_504131536668475_3526629583152953852_n.jpg?oh=810e04a65d0e7d5f2b09cfd69a2d3efc&oe=5AF23AF2
+https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26733918_504131983335097_4004086473661975552_n.jpg?oh=4bdcf7c2b1f815c6dccfc8dde4fcb8ce&oe=5AF1AE07
+https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26231253_504131910001771_230015825827274796_n.jpg?oh=680e29680a3bc4eb778512e63367dceb&oe=5AB24021
+https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26219722_504131573335138_8316021168441843615_n.jpg?oh=0038a775603edc5c18e29cb7dd9deeef&oe=5AE4804D
+https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26229425_504131570001805_6889638982476234911_n.jpg?oh=4e7842e378ae6b9a5fa76be1908666c3&oe=5AEFD505
+https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26229981_504131760001786_1342050876853854206_n.jpg?oh=1814373871b2148226a452b269c22bef&oe=5AF67AAD
