@@ -282,6 +282,11 @@ CODE
 
 this code is still not working totally and when solved will change from RPM to angular velocity. The reason being is that millis() can overflow quite quickly and if multiplied by six I could be making the issue worse before fixing other problems with the code#include <IRremote.h>
 
+
+	-infrared remote control
+	
+with a tv remote and a infrared receiver have been able to find the hex values of the buttons. when the hex values become true they will change the PWM that will be attached to the mosfet. the PWM duty will also be displayed onto the LCD.
+
 ```
 
 #include <IRremoteInt.h>
