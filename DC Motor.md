@@ -282,7 +282,7 @@ CODE
 
 this code is still not working totally and when solved will change from RPM to angular velocity. The reason being is that millis() can overflow quite quickly and if multiplied by six I could be making the issue worse before fixing other problems with the code#include <IRremote.h>
 
-''''c<b>
+    
 #include <IRremoteInt.h>
 #include <LiquidCrystal.h>
 
@@ -383,8 +383,8 @@ void angular_velocity(){
 
 }
 .
-</b>'''
-<b>'''c
+
+
 
 duty control by infrared remote to choose 3 speed setting on pulse width.
 
@@ -487,8 +487,8 @@ void angular_velocity(){
       lcdrefresh = millis();   
     }
 
-}
-</b>'''
+} 
+    
 
 https://github.com/jgell/lab-journal.md/blob/master/DC%20Motor.md
 https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26169818_504132126668416_6095534043517008697_n.jpg?oh=da56e278f5e0ec2f801b169fe6895ff9&oe=5AB36DB8
