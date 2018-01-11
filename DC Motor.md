@@ -498,6 +498,15 @@ void angular_velocity(){
 } 
     
 ```
+	videos
+	
+https://www.facebook.com/jack.gell.39/videos/504156353332660/
+https://www.facebook.com/jack.gell.39/videos/504156233332672/
+https://www.facebook.com/jack.gell.39/videos/504156506665978/
+https://www.facebook.com/jack.gell.39/videos/504156556665973/
+https://www.facebook.com/jack.gell.39/videos/504156656665963/
+
+	pitures
 
 https://github.com/jgell/lab-journal.md/blob/master/DC%20Motor.md
 https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26169818_504132126668416_6095534043517008697_n.jpg?oh=da56e278f5e0ec2f801b169fe6895ff9&oe=5AB36DB8
@@ -520,12 +529,7 @@ https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26219693_504155879999374_504223470
 https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26196026_504155899999372_104087161731913060_n.jpg?oh=0b094862106f7f1caf95bbe167148268&oe=5AB6D2FC
 https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26230158_504155929999369_1337004874302325606_n.jpg?oh=2997252555c7d913731be1f0f91a01a5&oe=5AFB56EA
 https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26219796_504155969999365_9053811824678892838_n.jpg?oh=65981a90f5717fdf88401c2ffe1a8813&oe=5AF9F79C
-https://www.facebook.com/jack.gell.39/videos/504156353332660/
-https://www.facebook.com/jack.gell.39/videos/504156233332672/
-https://www.facebook.com/jack.gell.39/videos/504156506665978/
-https://www.facebook.com/jack.gell.39/videos/504156556665973/
-https://www.facebook.com/jack.gell.39/videos/504156656665963/
-https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26219809_504156023332693_7520718065614911702_n.jpg?oh=3573c0f3c1da3b93ab0b33c3253b7d7e&oe=5AB419C4
+https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9```/26219809_504156023332693_7520718065614911702_n.jpg?oh=3573c0f3c1da3b93ab0b33c3253b7d7e&oe=5AB419C4
 https://www.facebook.com/jack.gell.39/videos/504156733332622/
 https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26230045_504156083332687_1686835564241953209_n.jpg?oh=c41618bb1f2c59aa6b53221a38ca9487&oe=5AEC55E6
 https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/26231671_504156123332683_4081584507467518834_n.jpg?oh=8f7c86bc0387e3e3337a65eb78c7fe93&oe=5AB675E3
