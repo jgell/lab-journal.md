@@ -1,0 +1,32 @@
+28/01/18
+
+Generate a sine wave in mat lab with
+  frequency = 5;
+  smaples per second = 1000;
+  and time = 0.4s;
+
+```Matlab  
+function sinewave = Gensine(~,~,~)
+    %%Time specificationtion:
+    Fs = 1000;  %samples per second
+    dt = 1/Fs;  %seconds per sample
+    StopTime = input('Enter time period = ')  %seconds
+    t = (0:dt:StopTime-dt); %seconds
+    a = input('Enter Amplitude = ')/2;
+    %%Sine wave:
+    figure;
+    plot(t,x);
+    ylabel('Amplitude');
+    xlabel('time');
+    title('ISHDEMO: sine using function');
+    zoom xon;
+    
+end
+```
+image of code
+
+https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27336500_513074862440809_8412475194121811178_n.jpg?oh=afde778f40a34cdbdad450014010284b&oe=5AE1F927
+
+image of wave figure
+
+https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27331649_513074839107478_3663298235467083231_n.jpg?oh=4d8b342b0a6d68bbb28ce6f05ccf4495&oe=5AE5378B
