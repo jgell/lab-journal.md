@@ -5,7 +5,8 @@ Generate a sine wave in mat lab with
   smaples per second = 1000;
   and time = 0.4s;
 
-```Matlab  
+```mathematica
+
 function sinewave = Gensine(~,~,~)
     %%Time specificationtion:
     Fs = 1000;  %samples per second
@@ -22,6 +23,7 @@ function sinewave = Gensine(~,~,~)
     zoom xon;
     
 end
+
 ```
 image of code
 
