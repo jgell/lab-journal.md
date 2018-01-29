@@ -1,20 +1,20 @@
 28/01/18
 
-Generate a sine wave in mat lab with
-  frequency = 5;
-  smaples per second = 1000;
-  and time = 0.4s;
+Generate a sine wave in matlab with inputs from user 
 
-```mathematica
+      ```mathematica
 
 function sinewave = Gensine(~,~,~)
     %%Time specificationtion:
     Fs = 1000;  %samples per second
     dt = 1/Fs;  %seconds per sample
-    StopTime = input('Enter time period = ')  %seconds
+    StopTime = input('Enter time period = ');  %seconds
     t = (0:dt:StopTime-dt); %seconds
     a = input('Enter Amplitude = ')/2;
     %%Sine wave:
+    Fc = 5;
+    x = a*square(2*pi*Fc*t);
+    %plot the signal versus time
     figure;
     plot(t,x);
     ylabel('Amplitude');
@@ -24,11 +24,52 @@ function sinewave = Gensine(~,~,~)
     
 end
 
-```
+      ```
 image of code
 
 https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27336500_513074862440809_8412475194121811178_n.jpg?oh=afde778f40a34cdbdad450014010284b&oe=5AE1F927
 
 image of wave figure
+  figure is at :  frequency = 5;
+                  smaples per second = 1000;
+                  time = 0.4s;
 
 https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27331649_513074839107478_3663298235467083231_n.jpg?oh=4d8b342b0a6d68bbb28ce6f05ccf4495&oe=5AE5378B
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+-- Generate a square wave in matlab
+
+      ```mathematica
+
+function squarewave()
+    %%Time specificationtion:
+    Fs = 1000;  %samples per second
+    dt = 1/Fs;  %seconds per sample
+    StopTime = 0.6;  %seconds
+    t = (0:dt:StopTime-dt); %seconds
+    %%Square wave:
+    Fc=31.5;
+    x = square(Fc*t);
+        %plot the signal versus time
+    figure;
+    plot(t,x);
+    ylabel('Amplitude');
+    xlabel('time');
+    title('ISHDEMO: sine using function');
+    zoom xon;
+    
+end
+
+      ```
+image of code
+https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27337339_513124099102552_6314742929132401611_n.jpg?oh=aed0ce29222c3388e9e9eaf2e500017e&oe=5AE8AE2C
+
+image of wave figure
+  figure is at :  frequency = 5;
+                  smaples per second = 1000;
+                  time = 0.4s;
+      
+https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27540837_513124112435884_2059507475263410266_n.jpg?oh=7f4fecbc6154bf33f6a5f90ae30cdbbd&oe=5B21733E
+
+//---------------------------------------------------------------------------------------------------------------------------------------
