@@ -1,5 +1,5 @@
 
-# Lab 1 H1 
+Lab 1
 
 H4 Generate a sine wave in matlab 
 
@@ -27,14 +27,14 @@ end
       ```
 H6 image of code
 
-[I'm an inline-style link]https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27336500_513074862440809_8412475194121811178_n.jpg?oh=afde778f40a34cdbdad450014010284b&oe=5AE1F927
+<https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27336500_513074862440809_8412475194121811178_n.jpg?oh=afde778f40a34cdbdad450014010284b&oe=5AE1F927>
 
 H6 image of wave figure
   figure is at :  frequency = 5;
                   smaples per second = 1000;
                   time = 0.4s;
 
-[I'm an inline-style link]https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27331649_513074839107478_3663298235467083231_n.jpg?oh=4d8b342b0a6d68bbb28ce6f05ccf4495&oe=5AE5378B
+<https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27331649_513074839107478_3663298235467083231_n.jpg?oh=4d8b342b0a6d68bbb28ce6f05ccf4495&oe=5AE5378B>
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -63,14 +63,14 @@ end
 
       ```
 image of code
-[I'm an inline-style link]https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27337339_513124099102552_6314742929132401611_n.jpg?oh=aed0ce29222c3388e9e9eaf2e500017e&oe=5AE8AE2C
+<https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27337339_513124099102552_6314742929132401611_n.jpg?oh=aed0ce29222c3388e9e9eaf2e500017e&oe=5AE8AE2C>
 
-image of wave figure
+image of wave >figure
   figure is at :  frequency = 5;
                   smaples per second = 1000;
                   time = 0.4s;
       
-[I'm an inline-style link]https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27540837_513124112435884_2059507475263410266_n.jpg?oh=7f4fecbc6154bf33f6a5f90ae30cdbbd&oe=5B21733E
+<https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27540837_513124112435884_2059507475263410266_n.jpg?oh=7f4fecbc6154bf33f6a5f90ae30cdbbd&oe=5B21733E>
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
