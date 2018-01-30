@@ -216,8 +216,48 @@ http://www.phasetechnologies.com/phaseconverterinfo/images/voltagebalance_table1
             
             THETA(s)/V(s) = Km/[s(sLa+Ra)*(sJ+B)+Km^2]
             
-            where time constants are:
+            where:
                   electrical = (sLa+Ra), mechanical = sJ+B.
+                  
+            mechtime constant:
+                  (sJ+B)<----mech factor.
+                  = B(s*(J/B)+1)
+                  tou mech = J/B
+                  =B(tou mech + 1)
+                  
+                  where:
+                        J = rotational inertia
+                        B = damping constant
+                  
+            electrical constant:
+                  (sLa+Ra)
+                  = Ra(s(La/Ra) + 1)
+                  = Ra(s*tou elec +1)
+                  tou elec = La/Ra
+                  
+           for:
+               J = 0.5, B = 1, La = 1 and R = 100.
+               tou mech = 0.5
+               tou elec = 0.001
+               tou mech / tou elec = 500:1 Ratio
+               
+               therefore showing that the electrical response if fast than the mechanical by 500 times.
+           
+           we can neglet the the electrical dynamic by reviewing Km/[s(sLa+Ra)*(sJ+B)+Km^2]:
+                                                                       ^^^^^^
+                                                                       ||||||
+           (sLa+Ra)
+           =Ra((sLa)/Ra+1)
+           =Ra((s*tou elec)/Ra+1) // we know tou elec is very small so we can say it = 0
+           =Ra(0+1)
+           =Ra                    //by doing this we have changed the transform from a second order 
+                                    derivative to a first order derivative by reducing a s term.
+           
+           by neglecting the electrical dynamic as it was only 1 500th of the mech dynamic we can say: 
+                  
+                  tha Km/[s(sLa+Ra)*(sJ+B)+Km^2] is = Km/[Ra*(sJ+B)+Km^2]
+                  
+           this also turns the transfer function G(s) = THETA(s)/V(s) ---> G(s) = OMEGA(s)/V(s) 
                   
             
 
