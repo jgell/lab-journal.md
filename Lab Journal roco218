@@ -75,29 +75,38 @@ https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27540837_513124112435884_205950747
 
 function Low_pass_filter()
     %%values
-    C = 0.01;
-    RC = 1/2*pi*5*C;
+    C = 0.1;
+    R = 1/2*pi*5*C;
     %%Time specificationtion:
     Fs = 1000;  %samples per second
     dt = 1/Fs;  %seconds per sample
     StopTime = 10;  %seconds
     t = (0:dt:StopTime-dt); %seconds
-    t = (0:dt:StopTime-dt); %seconds
+    t2 = (0:dt:StopTime-dt); %seconds
     
     %%Square wave:
     Fc=5;
     Vs = square(Fc*t);
-    if(Vs>0)
-        Vc = Vs.*(1-exp(-t/(RC))); %voltage drop accross capacitor
-    else
-        Vc = Vs.*(1-exp(-t/(RC))); %voltage drop accross capacitor
+    dtr = 0;
+    btr = 0;
+    if(t>dtr)
+        Vc = 1-(1-exp(-t2/(R*C))); %voltage drop accross capacitor
+            if (t==dtr)
+                btr = dtr+100;
+            end
+    if(t>btr)
+        %t2 = (StopTime-dt:dt:0); %seconds
+        Vc = 0+(1-exp(-t2/(R*C))); %voltage drop accross capacitor
+            if (t==btr)
+                dtr = btr+100;
+            end
     end
  
     %plot the signal versus time
     figure;
     
     hold on
-        plot(t,Vc);
+        plot(t2,Vc);
         plot(t,Vs);
     hold off
     
