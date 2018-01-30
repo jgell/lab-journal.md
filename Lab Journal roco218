@@ -1,5 +1,5 @@
 
-#Lab 1 H1 
+# Lab 1 H1 
 
 H4 Generate a sine wave in matlab 
 
@@ -119,6 +119,6 @@ function Low_pass_filter()
     
 end
 ```
-#Lab 2
+# Lab 2
 •	Write down the expression for motor torque in terms of motor current.
 
