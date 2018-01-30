@@ -1,19 +1,18 @@
 28/01/18
 
-Generate a sine wave in matlab with inputs from user 
+Generate a sine wave in matlab 
 
       ```mathematica
 
-function sinewave = Gensine(~,~,~)
+function sinewave()
     %%Time specificationtion:
     Fs = 1000;  %samples per second
     dt = 1/Fs;  %seconds per sample
-    StopTime = input('Enter time period = ');  %seconds
+    StopTime = 0.4;  %seconds
     t = (0:dt:StopTime-dt); %seconds
-    a = input('Enter Amplitude = ')/2;
-    %%Sine wave:
+    %%Square wave:
     Fc = 5;
-    x = a*square(2*pi*Fc*t);
+    x = sin(2*pi*Fc*t);
     %plot the signal versus time
     figure;
     plot(t,x);
