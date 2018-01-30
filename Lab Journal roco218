@@ -72,3 +72,38 @@ image of wave figure
 https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/27540837_513124112435884_2059507475263410266_n.jpg?oh=7f4fecbc6154bf33f6a5f90ae30cdbbd&oe=5B21733E
 
 //---------------------------------------------------------------------------------------------------------------------------------------
+
+function Low_pass_filter()
+    %%values
+    C = 0.01;
+    RC = 1/2*pi*5*C;
+    %%Time specificationtion:
+    Fs = 1000;  %samples per second
+    dt = 1/Fs;  %seconds per sample
+    StopTime = 10;  %seconds
+    t = (0:dt:StopTime-dt); %seconds
+    t = (0:dt:StopTime-dt); %seconds
+    
+    %%Square wave:
+    Fc=5;
+    Vs = square(Fc*t);
+    if(Vs>0)
+        Vc = Vs.*(1-exp(-t/(RC))); %voltage drop accross capacitor
+    else
+        Vc = Vs.*(1-exp(-t/(RC))); %voltage drop accross capacitor
+    end
+ 
+    %plot the signal versus time
+    figure;
+    
+    hold on
+        plot(t,Vc);
+        plot(t,Vs);
+    hold off
+    
+    ylabel('Amplitude');
+    xlabel('time');
+    title('ISHDEMO: square using function');
+    zoom xon;
+    
+end
