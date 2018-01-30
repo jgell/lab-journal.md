@@ -185,6 +185,42 @@ end
 http://www.phasetechnologies.com/phaseconverterinfo/images/voltagebalance_table1.gif
 
 
+2.	Use Laplace transformation to write transfer function of the system
+
+      input : v(t) --> V(s)                armature voltage
+      output: theta(t) --> THETA(s)        shaft angle
+      
+      Electrical:
+            -v(t) = Ra*Ia +La*(dia/dt) + Vb = 0
+            
+            where:
+                  -v(t) = applied voltage, Ra = armature resistance, Ia = armature current, La = armature inductance, Vb = back EMF.
+                  
+            Back EMF: Vb = Kb*w
+            
+            where:
+                  Kb = back EMF proportionality constant, w = omega(angular velocity).
+            
+            therfore:
+                  Kmw = Km(dtheta/dt).
+                  
+            Kb = Km , w(t) = dtheta(t)/dt.
+            
+            therefore:
+                      -v(t) = Ra*ia +la*i'a + Km*theta' = 0
+                      
+            V(s) = (Ra+sLa)*Ia(s)=sKm*THETA(s)
+            V(s) = (Ra+sLa)*(s^2(J/Km)+s(B/Km))*THETA(s) + sKmTHEATA(S)
+            KmV(s) = [(Ra+sLa)((s^2)*J+sB)+sKm^2]THETA(s)
+            KmV(s) = s[(Ra+sLa)(s*J+B)+Km^2]THETA(s)
+            
+            THETA(s)/V(s) = Km/[s(sLa+Ra)*(sJ+B)+Km^2]
+            
+            where time constants are:
+                  electrical = (sLa+Ra), mechanical = sJ+B.
+                  
+            
+
             
 refrences: 
           http://www.softschools.com/formulas/physics/torque_formula/59/
